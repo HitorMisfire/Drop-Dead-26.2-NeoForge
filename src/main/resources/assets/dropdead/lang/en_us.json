@@ -1,0 +1,13 @@
+{
+  "itemGroup.dropdead": "Example Mod Tab",
+  "block.dropdead.example_block": "Example Block",
+  "item.dropdead.example_item": "Example Item",
+
+  "dropdead.configuration.title": "Drop Dead Configs",
+  "dropdead.configuration.section.dropdead.common.toml": "Drop Dead Configs",
+  "dropdead.configuration.section.dropdead.common.toml.title": "Drop Dead Configs",
+  "dropdead.configuration.items": "Item List",
+  "dropdead.configuration.logDirtBlock": "Log Dirt Block",
+  "dropdead.configuration.magicNumberIntroduction": "Magic Number Text",
+  "dropdead.configuration.magicNumber": "Magic Number"
+}

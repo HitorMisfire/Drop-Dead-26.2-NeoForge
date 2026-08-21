@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "dropdead:block/fossil_block_top",
+    "side": "dropdead:block/fossil_block"
+  }
+}

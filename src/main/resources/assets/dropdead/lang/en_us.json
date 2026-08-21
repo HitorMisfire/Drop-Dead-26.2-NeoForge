@@ -1,13 +1,14 @@
 {
-  "itemGroup.dropdead": "Example Mod Tab",
-  "block.dropdead.example_block": "Example Block",
-  "item.dropdead.example_item": "Example Item",
+  "item.dropdead.fossil": "Fossil",
+  "item.dropdead.pyrite": "Pyrite",
 
-  "dropdead.configuration.title": "Drop Dead Configs",
-  "dropdead.configuration.section.dropdead.common.toml": "Drop Dead Configs",
-  "dropdead.configuration.section.dropdead.common.toml.title": "Drop Dead Configs",
-  "dropdead.configuration.items": "Item List",
-  "dropdead.configuration.logDirtBlock": "Log Dirt Block",
-  "dropdead.configuration.magicNumberIntroduction": "Magic Number Text",
-  "dropdead.configuration.magicNumber": "Magic Number"
+  "block.dropdead.pyrite_block": "Block of Pyrite",
+  "block.dropdead.fossil_block": "Fossilized Bone Block",
+  "block.dropdead.pyrite_ore": "Pyrite Ore",
+  "block.dropdead.deepslate_pyrite_ore": "Deepslate Pyrite Ore",
+  "block.dropdead.oak_split_log": "Oak Split Log",
+
+
+  "creativetab.dropdead.dropdead_items": "Drop Dead Items",
+  "creativetab.dropdead.dropdead_blocks": "Drop Dead Blocks"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pyrite",
+  "ingredients": [
+    "dropdead:pyrite_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "dropdead:pyrite"
+  }
+}

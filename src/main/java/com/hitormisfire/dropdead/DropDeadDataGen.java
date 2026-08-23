@@ -1,9 +1,6 @@
 package com.hitormisfire.dropdead;
 
-import com.hitormisfire.dropdead.datagen.ModBlockLootTableProvider;
-import com.hitormisfire.dropdead.datagen.ModBlockTagsProvider;
-import com.hitormisfire.dropdead.datagen.ModModelProvider;
-import com.hitormisfire.dropdead.datagen.ModRecipeProvider;
+import com.hitormisfire.dropdead.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -25,6 +22,7 @@ public class DropDeadDataGen {
 
         generator.addProvider(true, new ModModelProvider(packOutput));
         generator.addProvider(true, new ModBlockTagsProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 

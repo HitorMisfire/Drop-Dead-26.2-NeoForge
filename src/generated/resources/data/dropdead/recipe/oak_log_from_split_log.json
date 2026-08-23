@@ -1,16 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "pyrite",
+  "group": "split_logs_to_block",
   "key": {
-    "A": "dropdead:pyrite"
+    "A": "dropdead:oak_split_log"
   },
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "AA",
+    "AA"
   ],
   "result": {
-    "id": "dropdead:pyrite_block"
+    "id": "minecraft:oak_log"
   }
 }

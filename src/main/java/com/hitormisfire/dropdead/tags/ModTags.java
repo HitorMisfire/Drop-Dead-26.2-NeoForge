@@ -1,0 +1,29 @@
+package com.hitormisfire.dropdead.tags;
+
+import com.hitormisfire.dropdead.DropDead;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+
+public class ModTags {
+    public static class Blocks{
+
+        public static final TagKey<Block> OAK_SPLITTABLE = createTag("oak_splittable");
+
+        private static TagKey<Block> createTag(String name) {
+            return BlockTags.create(Identifier.fromNamespaceAndPath(DropDead.MOD_ID, name));
+        }
+    }
+    public static class Items{
+
+        public static final TagKey<Item> OAK_SPLITTABLE = createTag("oak_splittable");
+        public static final TagKey<Item> SPLIT_LOGS = createTag("split_logs");
+
+        private static TagKey<Item> createTag(String name) {
+            return ItemTags.create(Identifier.fromNamespaceAndPath(DropDead.MOD_ID, name));
+        }
+    }
+}

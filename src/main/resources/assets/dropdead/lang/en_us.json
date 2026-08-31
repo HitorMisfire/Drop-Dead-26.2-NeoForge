@@ -1,6 +1,10 @@
 {
   "item.dropdead.fossil": "Fossil",
   "item.dropdead.pyrite": "Pyrite",
+  "item.dropdead.wool_ball": "Ball of Wool",
+
+  "item.dropdead.bow_drill": "Bow Drill",
+  "item.dropdead.flint_bow_drill": "Flint Bow Drill",
 
   "block.dropdead.pyrite_block": "Block of Pyrite",
   "block.dropdead.fossil_block": "Fossilized Bone Block",

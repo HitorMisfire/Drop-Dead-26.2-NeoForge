@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bow_drill": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dropdead:bow_drill"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dropdead:flint_bow_drill"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bow_drill"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dropdead:flint_bow_drill"
+    ]
+  }
+}

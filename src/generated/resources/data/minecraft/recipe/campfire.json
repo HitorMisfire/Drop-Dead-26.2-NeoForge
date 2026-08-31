@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "#dropdead:split_logs",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "SS",
+    "AA"
+  ],
+  "result": {
+    "id": "minecraft:campfire"
+  }
+}

@@ -26,6 +26,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.FOSSIL);
                         output.accept(ModItems.PYRITE);
+                        output.accept(ModItems.WOOL_BALL);
+
+                        output.accept(ModItems.BOW_DRILL);
+                        output.accept(ModItems.FLINT_BOW_DRILL);
 
                     }).build());
 

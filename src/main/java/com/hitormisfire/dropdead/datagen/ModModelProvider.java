@@ -19,6 +19,10 @@ public class ModModelProvider extends ModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.FOSSIL.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.PYRITE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.WOOL_BALL.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ModItems.BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.FLINT_BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.PYRITE_BLOCK.get());

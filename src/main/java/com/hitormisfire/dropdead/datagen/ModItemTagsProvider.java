@@ -6,6 +6,7 @@ import com.hitormisfire.dropdead.item.ModItems;
 import com.hitormisfire.dropdead.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
@@ -25,6 +26,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         tag(ModTags.Items.SPLIT_LOGS)
                 .add(ModItems.getRK(ModBlocks.OAK_SPLIT_LOG.asItem()));
+
+        tag(ModTags.Items.BOW_DRILL_REPAIRABLE)
+                .add(ModItems.getRK(Items.STICK));
+        tag(ItemTags.PICKAXES).add(ModItems.getRK(ModItems.BOW_DRILL.get()));
 
     }
 }

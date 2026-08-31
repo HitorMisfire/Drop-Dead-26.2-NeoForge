@@ -4,22 +4,18 @@ import com.hitormisfire.dropdead.DropDead;
 import com.hitormisfire.dropdead.block.ModBlocks;
 import com.hitormisfire.dropdead.item.ModItems;
 import com.hitormisfire.dropdead.tags.ModTags;
-import com.ibm.icu.util.Output;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
@@ -62,6 +58,45 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.PYRITE_BLOCK.get()), has(ModBlocks.PYRITE_BLOCK))
                 .group("pyrite")
                 .save(output);
+
+
+        shapeless(RecipeCategory.MISC, ModItems.WOOL_BALL.get())
+                .requires(Items.STRING,2)
+                .unlockedBy(getHasName(ModItems.WOOL_BALL.get()), has(ModItems.WOOL_BALL))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .group("wool_ball")
+                .save(output);
+        shapeless(RecipeCategory.MISC, Items.STRING,2)
+                .requires(ModItems.WOOL_BALL.get())
+                .unlockedBy(getHasName(ModItems.WOOL_BALL.get()), has(ModItems.WOOL_BALL))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .group("wool_ball")
+                .save(output,"dropdead:string_from_wool_ball");
+        shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.WOOL.white())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.WOOL_BALL.get())
+                .unlockedBy(getHasName(ModItems.WOOL_BALL.get()), has(ModItems.WOOL_BALL))
+                .group("wool_ball")
+                .save(output,"minecraft:white_wool_from_string");
+
+
+
+        shaped(RecipeCategory.TOOLS, ModItems.BOW_DRILL.get())
+                .pattern("A#")
+                .pattern("#A")
+                .define('A', Items.STRING)
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("bow_drill")
+                .save(output);
+        shapeless(RecipeCategory.TOOLS, ModItems.FLINT_BOW_DRILL.get())
+                .requires(ModItems.BOW_DRILL.get())
+                .requires(Items.FLINT)
+                .unlockedBy(getHasName(ModItems.BOW_DRILL.get()), has(ModItems.BOW_DRILL.get()))
+                .save(output);
+
+
         shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OAK_SPLIT_LOG.get(), 4)
                 .requires(ModTags.Items.OAK_SPLITTABLE)
                 .unlockedBy(getHasName(Blocks.OAK_LOG), has(Blocks.OAK_LOG))
@@ -79,13 +114,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_split_logs", has(ModTags.Items.SPLIT_LOGS))
                 .group("sticks")
                 .save(output);
+        shaped(RecipeCategory.DECORATIONS, Blocks.CAMPFIRE)
+                .pattern("SS")
+                .pattern("AA")
+                .define('S', Items.STICK)
+                .define('A', ModTags.Items.SPLIT_LOGS)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .unlockedBy("has_coal", has(ItemTags.COALS))
+                .save(output);
 
 
 
 
 
 
-        shapeless(RecipeCategory.MISC, Blocks.OAK_PLANKS)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_PLANKS)
                 .requires(Blocks.BEDROCK)
                 .unlockedBy(getHasName(Blocks.BEDROCK), has(Blocks.BEDROCK))
                 .group("temp")

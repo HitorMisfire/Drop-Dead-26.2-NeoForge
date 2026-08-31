@@ -35,6 +35,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.PYRITE_ORE.get()))
                 .add(ModBlocks.getRK(ModBlocks.DEEPSLATE_PYRITE_ORE.get()));
 
+        tag(ModTags.Blocks.INCORRECT_FOR_BOW_DRILL)
+                .addTag(BlockTags.INCORRECT_FOR_WOODEN_TOOL);
+
         //WOOD LOG TAGS
         tag(ModTags.Blocks.OAK_SPLITTABLE)
                 .add(ModBlocks.getRK(Blocks.OAK_LOG))

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "dropdead:bow_drill",
+    "minecraft:flint"
+  ],
+  "result": {
+    "id": "dropdead:flint_bow_drill"
+  }
+}

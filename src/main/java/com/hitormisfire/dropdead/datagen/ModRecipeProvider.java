@@ -118,14 +118,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_split_logs", has(ModTags.Items.SPLIT_LOGS))
                 .group("sticks")
                 .save(output);
-        shaped(RecipeCategory.DECORATIONS, Blocks.CAMPFIRE)
-                .pattern("SS")
-                .pattern("AA")
-                .define('S', Items.STICK)
-                .define('A', ModTags.Items.SPLIT_LOGS)
-                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
-                .group("campfire")
-                .save(output);
         shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLESTONE,2)
                 .pattern("A#")
                 .pattern("#A")

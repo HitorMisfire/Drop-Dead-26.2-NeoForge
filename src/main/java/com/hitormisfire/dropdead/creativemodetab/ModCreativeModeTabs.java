@@ -29,7 +29,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WOOL_BALL);
 
                         output.accept(ModItems.BOW_DRILL);
-                        output.accept(ModItems.FLINT_BOW_DRILL);
+                        output.accept(ModItems.SHARP_BOW_DRILL);
 
                     }).build());
 
@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_PYRITE_ORE);
                         output.accept(ModBlocks.FOSSIL_BLOCK);
                         output.accept(ModBlocks.OAK_SPLIT_LOG);
+                        output.accept(ModBlocks.LOOSE_COBBLESTONE);
 
 
                     }).build());

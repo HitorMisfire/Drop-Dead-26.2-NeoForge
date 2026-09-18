@@ -31,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.PYRITE_BLOCK.get());
         dropSelf(ModBlocks.FOSSIL_BLOCK.get());
+        dropSelf(ModBlocks.LOOSE_COBBLESTONE.get());
 
         add(ModBlocks.OAK_SPLIT_LOG.get(), this::createSegmentedLogDrops);
 

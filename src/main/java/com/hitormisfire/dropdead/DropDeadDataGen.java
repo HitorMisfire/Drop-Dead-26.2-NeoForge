@@ -30,5 +30,7 @@ public class DropDeadDataGen {
                 ), lookupProvider));
 
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
+
+        generator.addProvider(true,new ModGlobalLootModifierProvider(packOutput,lookupProvider));
     }
 }

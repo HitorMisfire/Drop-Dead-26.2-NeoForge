@@ -22,12 +22,13 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.WOOL_BALL.get(), ModelTemplates.FLAT_ITEM);
 
         itemModels.generateFlatItem(ModItems.BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModels.generateFlatItem(ModItems.FLINT_BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.SHARP_BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.PYRITE_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.PYRITE_ORE.get());
         blockModels.createTrivialCube(ModBlocks.DEEPSLATE_PYRITE_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.LOOSE_COBBLESTONE.get());
 
         blockModels.createRotatedPillarWithHorizontalVariant(ModBlocks.FOSSIL_BLOCK.get(), TexturedModel.COLUMN_ALT,TexturedModel.COLUMN_HORIZONTAL_ALT);
 

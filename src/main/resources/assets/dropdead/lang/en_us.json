@@ -4,12 +4,15 @@
   "item.dropdead.wool_ball": "Ball of Wool",
 
   "item.dropdead.bow_drill": "Bow Drill",
-  "item.dropdead.flint_bow_drill": "Flint Bow Drill",
+  "item.dropdead.sharp_bow_drill": "Sharp Bow Drill",
 
   "block.dropdead.pyrite_block": "Block of Pyrite",
   "block.dropdead.fossil_block": "Fossilized Bone Block",
   "block.dropdead.pyrite_ore": "Pyrite Ore",
   "block.dropdead.deepslate_pyrite_ore": "Deepslate Pyrite Ore",
+
+  "block.dropdead.loose_cobblestone": "Loose Cobblestone",
+
   "block.dropdead.oak_split_log": "Oak Split Log",
 
 

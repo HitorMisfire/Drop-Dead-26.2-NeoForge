@@ -25,7 +25,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.PYRITE_BLOCK.get()))
                 .add(ModBlocks.getRK(ModBlocks.PYRITE_ORE.get()))
                 .add(ModBlocks.getRK(ModBlocks.DEEPSLATE_PYRITE_ORE.get()))
-                .add(ModBlocks.getRK(ModBlocks.FOSSIL_BLOCK.get()));
+                .add(ModBlocks.getRK(ModBlocks.FOSSIL_BLOCK.get()))
+                .add(ModBlocks.getRK(ModBlocks.LOOSE_COBBLESTONE.get()));
 
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.getRK(ModBlocks.OAK_SPLIT_LOG.get()));
@@ -37,6 +38,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(ModTags.Blocks.INCORRECT_FOR_BOW_DRILL)
                 .addTag(BlockTags.INCORRECT_FOR_WOODEN_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_COPPER_TOOL)
+                .remove(BlockTags.GOLD_ORES);
 
         //WOOD LOG TAGS
         tag(ModTags.Blocks.OAK_SPLITTABLE)

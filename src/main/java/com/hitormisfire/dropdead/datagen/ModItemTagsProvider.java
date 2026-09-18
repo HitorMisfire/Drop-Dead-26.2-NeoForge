@@ -8,7 +8,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
@@ -29,7 +28,14 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         tag(ModTags.Items.BOW_DRILL_REPAIRABLE)
                 .add(ModItems.getRK(Items.STICK));
-        tag(ItemTags.PICKAXES).add(ModItems.getRK(ModItems.BOW_DRILL.get()));
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.getRK(ModItems.BOW_DRILL.get()));
+        tag(ModTags.Items.BOW_DRILL_BITS)
+                .add(ModItems.getRK(Items.FLINT))
+                .addTag(ItemTags.METAL_NUGGETS);
+
+        tag(ItemTags.STONE_TOOL_MATERIALS)
+                .add(ModItems.getRK(ModBlocks.LOOSE_COBBLESTONE.asItem()));
 
     }
 }

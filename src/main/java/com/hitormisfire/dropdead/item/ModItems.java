@@ -22,8 +22,8 @@ public class ModItems {
 
 
     public static final DeferredItem<Item> BOW_DRILL = ITEMS.registerItem("bow_drill",
-        properties -> new BowDrillItem(properties.useCooldown(2).durability(32)));
-    public static final DeferredItem<Item> FLINT_BOW_DRILL = ITEMS.registerItem("flint_bow_drill",
+        properties -> new BowDrillItem(properties.useCooldown(2).durability(24)));
+    public static final DeferredItem<Item> SHARP_BOW_DRILL = ITEMS.registerItem("sharp_bow_drill",
         properties -> new BowDrillItem(properties.pickaxe(ModToolTiers.BOW_DRILL,0,0)
                 .useCooldown(2)));
 

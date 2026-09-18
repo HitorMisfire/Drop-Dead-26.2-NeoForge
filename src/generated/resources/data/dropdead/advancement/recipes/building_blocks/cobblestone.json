@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stick": {
+    "has_clay_ball": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stick"
+            "items": "minecraft:clay_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_loose_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dropdead:loose_cobblestone"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:campfire"
+        "recipe": "dropdead:cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stick"
+      "has_loose_cobblestone",
+      "has_clay_ball"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:campfire"
+      "dropdead:cobblestone"
     ]
   }
 }

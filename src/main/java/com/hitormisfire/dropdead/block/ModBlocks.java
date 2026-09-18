@@ -1,6 +1,7 @@
 package com.hitormisfire.dropdead.block;
 
 import com.hitormisfire.dropdead.DropDead;
+import com.hitormisfire.dropdead.block.custom.ModFallingBlock;
 import com.hitormisfire.dropdead.block.custom.SplitLogBlock;
 import com.hitormisfire.dropdead.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -39,6 +40,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OAK_SPLIT_LOG = registerBlock("oak_split_log",
             properties -> new SplitLogBlock(properties.destroyTime(2f)
                     .ignitedByLava().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> LOOSE_COBBLESTONE = registerBlock("loose_cobblestone",
+            properties -> new ModFallingBlock(properties.destroyTime(1.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

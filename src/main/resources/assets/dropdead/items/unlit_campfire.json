@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "dropdead:item/flint_bow_drill"
+    "model": "dropdead:item/unlit_campfire"
   }
 }

@@ -25,6 +25,7 @@ public class ModTags {
         public static final TagKey<Item> SPLIT_LOGS = createTag("split_logs");
 
         public static final TagKey<Item> BOW_DRILL_REPAIRABLE = createTag("bow_drill_repairable");
+        public static final TagKey<Item> BOW_DRILL_BITS = createTag("bow_drill_bits");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(Identifier.fromNamespaceAndPath(DropDead.MOD_ID, name));

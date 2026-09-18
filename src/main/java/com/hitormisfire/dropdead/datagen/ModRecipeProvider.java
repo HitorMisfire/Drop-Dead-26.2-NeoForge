@@ -10,7 +10,6 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
@@ -84,16 +83,21 @@ public class ModRecipeProvider extends RecipeProvider {
 
         shaped(RecipeCategory.TOOLS, ModItems.BOW_DRILL.get())
                 .pattern("A#")
-                .pattern("#A")
+                .pattern("# ")
                 .define('A', Items.STRING)
                 .define('#', Items.STICK)
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .group("bow_drill")
                 .save(output);
-        shapeless(RecipeCategory.TOOLS, ModItems.FLINT_BOW_DRILL.get())
-                .requires(ModItems.BOW_DRILL.get())
-                .requires(Items.FLINT)
-                .unlockedBy(getHasName(ModItems.BOW_DRILL.get()), has(ModItems.BOW_DRILL.get()))
+        shaped(RecipeCategory.TOOLS, ModItems.SHARP_BOW_DRILL.get())
+                .pattern("A#")
+                .pattern("#B")
+                .define('A', Items.STRING)
+                .define('#', Items.STICK)
+                .define('B', ModTags.Items.BOW_DRILL_BITS)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .unlockedBy("has_drill_bit", has(ModTags.Items.BOW_DRILL_BITS))
+                .group("bow_drill")
                 .save(output);
 
 
@@ -120,8 +124,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('S', Items.STICK)
                 .define('A', ModTags.Items.SPLIT_LOGS)
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
-                .unlockedBy("has_coal", has(ItemTags.COALS))
+                .group("campfire")
                 .save(output);
+        shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLESTONE,2)
+                .pattern("A#")
+                .pattern("#A")
+                .define('A', ModBlocks.LOOSE_COBBLESTONE.get())
+                .define('#', Items.CLAY_BALL)
+                .unlockedBy(getHasName(ModBlocks.LOOSE_COBBLESTONE.get()), has(ModBlocks.LOOSE_COBBLESTONE.get()))
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .group("clay_cobblestone")
+                .save(output, "dropdead:cobblestone");
+
 
 
 

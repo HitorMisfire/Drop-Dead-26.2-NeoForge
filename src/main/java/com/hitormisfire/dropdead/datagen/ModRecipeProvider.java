@@ -11,9 +11,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.CookingBookCategory;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 
@@ -130,6 +128,15 @@ public class ModRecipeProvider extends RecipeProvider {
 
 
 
+        shaped(RecipeCategory.MISC, ModItems.UNFIRED_BOWL.get())
+                .pattern("AA")
+                .define('A', Items.CLAY_BALL)
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .group("unfired_pottery")
+                .save(output);
+
+
+
 
 
 
@@ -141,9 +148,12 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
 
         List<ItemLike> PYRITE_SMELTABLES = List.of(ModBlocks.PYRITE_ORE, ModBlocks.DEEPSLATE_PYRITE_ORE);
+        List<ItemLike> CLAY_SMELTABLES = List.of(ModItems.UNFIRED_BOWL);
 
         oreSmelting(PYRITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.PYRITE.get(),.25f,200,"pyrite");
         oreBlasting(PYRITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.PYRITE.get(),.25f,100,"pyrite");
+
+        campfireSmelting(CLAY_SMELTABLES,RecipeCategory.MISC,CookingBookCategory.MISC,Items.BOWL,.03f,200,"clay");
     }
 
     @Override
@@ -155,4 +165,9 @@ public class ModRecipeProvider extends RecipeProvider {
                     .save(output, DropDead.MOD_ID + ":" + getItemName(result) + fromDesc + "_" + getItemName(itemlike));
         }
     }
+
+    protected void campfireSmelting(List<ItemLike> smeltables, RecipeCategory craftingCategory, CookingBookCategory cookingCategory, ItemLike result, float experience, int cookingTime, String group) {
+        this.oreCooking(CampfireCookingRecipe::new, smeltables, craftingCategory, cookingCategory, result, experience, cookingTime, group, "_from_campfire_cooking");
+    }
+
 }

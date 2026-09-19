@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "unfired_pottery",
+  "key": {
+    "A": "minecraft:clay_ball"
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "id": "dropdead:unfired_bowl"
+  }
+}

@@ -26,13 +26,13 @@ public class ModBlocks {
     }
 
     public static final DeferredBlock<Block> PYRITE_BLOCK = registerBlock("pyrite_block",
-            properties -> new Block(properties.destroyTime(4f)
+            properties -> new Block(properties.destroyTime(4f).explosionResistance(6f)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> PYRITE_ORE = registerBlock("pyrite_ore",
-            properties -> new Block(properties.destroyTime(3f)
+            properties -> new Block(properties.destroyTime(3f).explosionResistance(6f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> DEEPSLATE_PYRITE_ORE = registerBlock("deepslate_pyrite_ore",
-            properties -> new Block(properties.destroyTime(5f)
+            properties -> new Block(properties.destroyTime(5f).explosionResistance(6f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final DeferredBlock<Block> FOSSIL_BLOCK = registerBlock("fossil_block",
             properties -> new RotatedPillarBlock(properties.destroyTime(2f)
@@ -41,7 +41,7 @@ public class ModBlocks {
             properties -> new SplitLogBlock(properties.destroyTime(2f)
                     .ignitedByLava().sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> LOOSE_COBBLESTONE = registerBlock("loose_cobblestone",
-            properties -> new ModFallingBlock(properties.destroyTime(1.5f)
+            properties -> new ModFallingBlock(properties.destroyTime(1.5f).explosionResistance(6f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

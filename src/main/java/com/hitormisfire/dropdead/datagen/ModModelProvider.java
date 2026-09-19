@@ -20,6 +20,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.FOSSIL.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.PYRITE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.WOOL_BALL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.UNFIRED_BOWL.get(), ModelTemplates.FLAT_ITEM);
 
         itemModels.generateFlatItem(ModItems.BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.SHARP_BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);

@@ -19,6 +19,7 @@ public class ModItems {
     public static final DeferredItem<Item> FOSSIL = ITEMS.registerSimpleItem("fossil");
     public static final DeferredItem<Item> PYRITE = ITEMS.registerSimpleItem("pyrite");
     public static final DeferredItem<Item> WOOL_BALL = ITEMS.registerSimpleItem("wool_ball");
+    public static final DeferredItem<Item> UNFIRED_BOWL = ITEMS.registerSimpleItem("unfired_bowl");
 
 
     public static final DeferredItem<Item> BOW_DRILL = ITEMS.registerItem("bow_drill",

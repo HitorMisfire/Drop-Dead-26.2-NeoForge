@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FOSSIL);
                         output.accept(ModItems.PYRITE);
                         output.accept(ModItems.WOOL_BALL);
+                        output.accept(ModItems.UNFIRED_BOWL);
 
                         output.accept(ModItems.BOW_DRILL);
                         output.accept(ModItems.SHARP_BOW_DRILL);

@@ -55,6 +55,8 @@ public class DropDead {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.FOSSIL);
             event.accept(ModItems.PYRITE);
+            event.accept(ModItems.UNFIRED_BOWL);
+            event.accept(ModItems.FIRED_BOWL);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

@@ -2,6 +2,8 @@
   "item.dropdead.fossil": "Fossil",
   "item.dropdead.pyrite": "Pyrite",
   "item.dropdead.wool_ball": "Ball of Wool",
+  "item.dropdead.unfired_bowl": "Unfired Bowl",
+  "item.dropdead.fired_bowl":  "Fired Bowl",
 
   "item.dropdead.bow_drill": "Bow Drill",
   "item.dropdead.sharp_bow_drill": "Sharp Bow Drill",

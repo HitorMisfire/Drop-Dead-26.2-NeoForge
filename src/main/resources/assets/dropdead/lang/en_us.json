@@ -2,8 +2,21 @@
   "item.dropdead.fossil": "Fossil",
   "item.dropdead.pyrite": "Pyrite",
   "item.dropdead.wool_ball": "Ball of Wool",
+
   "item.dropdead.unfired_bowl": "Unfired Bowl",
-  "item.dropdead.fired_bowl":  "Fired Bowl",
+  "item.dropdead.bowl_of_water": "Bowl of Water",
+  "item.dropdead.bowl_of_tannin": "Bowl of Tannin",
+  "item.dropdead.rawhide": "Rawhide",
+
+  "item.dropdead.oak_bark": "Oak Bark",
+  "item.dropdead.birch_bark": "Birch Bark",
+  "item.dropdead.spruce_bark": "Spruce Bark",
+  "item.dropdead.jungle_bark": "Jungle Bark",
+  "item.dropdead.dark_oak_bark": "Dark Oak Bark",
+  "item.dropdead.acacia_bark": "Acacia Bark",
+  "item.dropdead.cherry_bark": "Cherry Bark",
+  "item.dropdead.mangrove_bark": "Mangrove Bark",
+  "item.dropdead.pale_oak_bark": "Pale Oak Bark",
 
   "item.dropdead.bow_drill": "Bow Drill",
   "item.dropdead.sharp_bow_drill": "Sharp Bow Drill",

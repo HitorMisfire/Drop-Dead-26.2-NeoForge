@@ -6,6 +6,7 @@ import com.hitormisfire.dropdead.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.data.PackOutput;
@@ -17,10 +18,26 @@ public class ModModelProvider extends ModelProvider {
 
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+        /* ITEMS */
         itemModels.generateFlatItem(ModItems.FOSSIL.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.PYRITE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.WOOL_BALL.get(), ModelTemplates.FLAT_ITEM);
+
         itemModels.generateFlatItem(ModItems.UNFIRED_BOWL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BOWL_OF_WATER.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BOWL_OF_TANNIN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RAWHIDE.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ModItems.OAK_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BIRCH_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.SPRUCE_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.JUNGLE_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.DARK_OAK_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.ACACIA_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CHERRY_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.MANGROVE_BARK.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.PALE_OAK_BARK.get(), ModelTemplates.FLAT_ITEM);
+
 
         itemModels.generateFlatItem(ModItems.BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.SHARP_BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);

@@ -4,6 +4,8 @@ import com.hitormisfire.dropdead.DropDead;
 import com.hitormisfire.dropdead.block.ModBlocks;
 import com.hitormisfire.dropdead.item.ModItems;
 import com.hitormisfire.dropdead.tags.ModTags;
+import net.minecraft.advancements.predicates.ItemPredicate;
+import net.minecraft.advancements.triggers.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -126,13 +128,19 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("clay_cobblestone")
                 .save(output, "dropdead:cobblestone");
 
-
-
         shaped(RecipeCategory.MISC, ModItems.UNFIRED_BOWL.get())
                 .pattern("AA")
                 .define('A', Items.CLAY_BALL)
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                 .group("unfired_pottery")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.BOWL_OF_TANNIN.get())
+                .requires(ModTags.Items.WOOD_BARK)
+                .requires(ModItems.BOWL_OF_WATER)
+                .requires(ModItems.RAWHIDE)
+                .unlockedBy("has_wood_bark", has(ModTags.Items.WOOD_BARK))
+                .group("bowl_of_tannin")
                 .save(output);
 
 

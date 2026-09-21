@@ -37,5 +37,15 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.STONE_TOOL_MATERIALS)
                 .add(ModItems.getRK(ModBlocks.LOOSE_COBBLESTONE.asItem()));
 
+        tag(ModTags.Items.WOOD_BARK)
+                .add(ModItems.getRK(ModItems.OAK_BARK.get()))
+                .add(ModItems.getRK(ModItems.BIRCH_BARK.get()))
+                .add(ModItems.getRK(ModItems.SPRUCE_BARK.get()))
+                .add(ModItems.getRK(ModItems.JUNGLE_BARK.get()))
+                .add(ModItems.getRK(ModItems.DARK_OAK_BARK.get()))
+                .add(ModItems.getRK(ModItems.ACACIA_BARK.get()))
+                .add(ModItems.getRK(ModItems.CHERRY_BARK.get()))
+                .add(ModItems.getRK(ModItems.MANGROVE_BARK.get()))
+                .add(ModItems.getRK(ModItems.PALE_OAK_BARK.get()));
     }
 }

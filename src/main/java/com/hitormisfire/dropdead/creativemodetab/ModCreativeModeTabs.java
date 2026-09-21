@@ -27,7 +27,22 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FOSSIL);
                         output.accept(ModItems.PYRITE);
                         output.accept(ModItems.WOOL_BALL);
+
                         output.accept(ModItems.UNFIRED_BOWL);
+                        output.accept(ModItems.BOWL_OF_WATER);
+                        output.accept(ModItems.BOWL_OF_TANNIN);
+                        output.accept(ModItems.RAWHIDE);
+
+                        output.accept(ModItems.OAK_BARK);
+                        output.accept(ModItems.BIRCH_BARK);
+                        output.accept(ModItems.SPRUCE_BARK);
+                        output.accept(ModItems.JUNGLE_BARK);
+                        output.accept(ModItems.DARK_OAK_BARK);
+                        output.accept(ModItems.ACACIA_BARK);
+                        output.accept(ModItems.CHERRY_BARK);
+                        output.accept(ModItems.MANGROVE_BARK);
+                        output.accept(ModItems.PALE_OAK_BARK);
+
 
                         output.accept(ModItems.BOW_DRILL);
                         output.accept(ModItems.SHARP_BOW_DRILL);

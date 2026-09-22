@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.BOW_DRILL);
                         output.accept(ModItems.SHARP_BOW_DRILL);
+                        output.accept(ModItems.STONE_ADZE);
 
                     }).build());
 

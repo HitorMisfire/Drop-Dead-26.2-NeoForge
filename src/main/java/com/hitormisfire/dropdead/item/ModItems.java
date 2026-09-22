@@ -1,10 +1,12 @@
 package com.hitormisfire.dropdead.item;
 
 import com.hitormisfire.dropdead.DropDead;
+import com.hitormisfire.dropdead.item.custom.AdzeItem;
 import com.hitormisfire.dropdead.item.custom.BowDrillItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -25,8 +27,10 @@ public class ModItems {
     public static final DeferredItem<Item> BOW_DRILL = ITEMS.registerItem("bow_drill",
         properties -> new BowDrillItem(properties.useCooldown(2).durability(24)));
     public static final DeferredItem<Item> SHARP_BOW_DRILL = ITEMS.registerItem("sharp_bow_drill",
-        properties -> new BowDrillItem(properties.pickaxe(ModToolTiers.BOW_DRILL,0,0)
+        properties -> new BowDrillItem(properties.pickaxe(ModToolMaterials.BOW_DRILL,0,0)
                 .useCooldown(2)));
+    public static final DeferredItem<Item> STONE_ADZE = ITEMS.registerItem("stone_adze",
+        properties -> new AdzeItem(ToolMaterial.STONE,0,0,properties));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

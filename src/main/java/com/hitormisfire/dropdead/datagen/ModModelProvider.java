@@ -24,6 +24,7 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.generateFlatItem(ModItems.BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.SHARP_BOW_DRILL.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.STONE_ADZE.get(),ModelTemplates.FLAT_HANDHELD_ITEM);
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.PYRITE_BLOCK.get());

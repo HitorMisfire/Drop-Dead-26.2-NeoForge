@@ -1,0 +1,7 @@
+{
+  "values": {
+    "minecraft:oak_log": {
+      "bark_item": "dropdead:fossil"
+    }
+  }
+}

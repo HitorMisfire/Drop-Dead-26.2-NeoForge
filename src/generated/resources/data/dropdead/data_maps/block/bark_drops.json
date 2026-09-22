@@ -1,0 +1,58 @@
+{
+  "values": {
+    "minecraft:acacia_log": {
+      "bark_item": "dropdead:acacia_bark"
+    },
+    "minecraft:acacia_wood": {
+      "bark_item": "dropdead:acacia_bark"
+    },
+    "minecraft:birch_log": {
+      "bark_item": "dropdead:birch_bark"
+    },
+    "minecraft:birch_wood": {
+      "bark_item": "dropdead:birch_bark"
+    },
+    "minecraft:cherry_log": {
+      "bark_item": "dropdead:cherry_bark"
+    },
+    "minecraft:cherry_wood": {
+      "bark_item": "dropdead:cherry_bark"
+    },
+    "minecraft:dark_oak_log": {
+      "bark_item": "dropdead:dark_oak_bark"
+    },
+    "minecraft:dark_oak_wood": {
+      "bark_item": "dropdead:dark_oak_bark"
+    },
+    "minecraft:jungle_log": {
+      "bark_item": "dropdead:jungle_bark"
+    },
+    "minecraft:jungle_wood": {
+      "bark_item": "dropdead:jungle_bark"
+    },
+    "minecraft:mangrove_log": {
+      "bark_item": "dropdead:mangrove_bark"
+    },
+    "minecraft:mangrove_wood": {
+      "bark_item": "dropdead:mangrove_bark"
+    },
+    "minecraft:oak_log": {
+      "bark_item": "dropdead:oak_bark"
+    },
+    "minecraft:oak_wood": {
+      "bark_item": "dropdead:oak_bark"
+    },
+    "minecraft:pale_oak_log": {
+      "bark_item": "dropdead:pale_oak_bark"
+    },
+    "minecraft:pale_oak_wood": {
+      "bark_item": "dropdead:pale_oak_bark"
+    },
+    "minecraft:spruce_log": {
+      "bark_item": "dropdead:spruce_bark"
+    },
+    "minecraft:spruce_wood": {
+      "bark_item": "dropdead:spruce_bark"
+    }
+  }
+}

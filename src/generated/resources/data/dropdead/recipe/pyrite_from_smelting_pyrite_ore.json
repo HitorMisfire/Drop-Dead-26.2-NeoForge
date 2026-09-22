@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "experience": 0.25,
-  "group": "pyrite",
-  "ingredient": "dropdead:pyrite_ore",
-  "result": {
-    "id": "dropdead:pyrite"
-  }
-}

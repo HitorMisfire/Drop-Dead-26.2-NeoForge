@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "experience": 0.25,
-  "group": "pyrite",
-  "ingredient": "dropdead:deepslate_pyrite_ore",
-  "result": {
-    "id": "dropdead:pyrite"
-  }
-}

@@ -4,6 +4,7 @@ import com.hitormisfire.dropdead.block.ModBlocks;
 import com.hitormisfire.dropdead.creativemodetab.ModCreativeModeTabs;
 import com.hitormisfire.dropdead.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -17,6 +18,8 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
+import java.beans.EventHandler;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(DropDead.MOD_ID)
@@ -71,4 +74,5 @@ public class DropDead {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+
 }

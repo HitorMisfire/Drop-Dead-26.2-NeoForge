@@ -15,13 +15,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class AxeItemMixin {
 
 
-    @Inject(method = "getAxeStrippingState",
-            at = @At("HEAD"), cancellable = true)
-    private static void getBarkState(BlockState originalState, CallbackInfoReturnable<Item> cir) {
-        BarkDroppable barkDroppable = (BarkDroppable) originalState.getData(DropDeadDataMaps.BARK_DROPPABLES);
-        if (barkDroppable != null) {
-            cir.setReturnValue(barkDroppable.barkItem());
-        }
-        DropDead.LOGGER.info(String.valueOf(cir.getReturnValue()));
-    }
+//    @Inject(method = "getAxeStrippingState",
+//            at = @At("HEAD"), cancellable = true)
+//    private static void getBarkState(BlockState originalState, CallbackInfoReturnable<Item> cir) {
+//        BarkDroppable barkDroppable = (BarkDroppable) originalState.getData(DropDeadDataMaps.BARK_DROPPABLES);
+//        if (barkDroppable != null) {
+//            cir.setReturnValue(barkDroppable.barkItem());
+//        }
+//        DropDead.LOGGER.info(String.valueOf(cir.getReturnValue()));
+//    }
 }

@@ -4,22 +4,17 @@ import com.hitormisfire.dropdead.DropDead;
 import com.hitormisfire.dropdead.block.ModBlocks;
 import com.hitormisfire.dropdead.item.ModItems;
 import com.hitormisfire.dropdead.tags.ModTags;
-import com.ibm.icu.util.Output;
+import net.minecraft.advancements.predicates.ItemPredicate;
+import net.minecraft.advancements.triggers.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.CookingBookCategory;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
@@ -62,6 +57,50 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.PYRITE_BLOCK.get()), has(ModBlocks.PYRITE_BLOCK))
                 .group("pyrite")
                 .save(output);
+
+
+        shapeless(RecipeCategory.MISC, ModItems.WOOL_BALL.get())
+                .requires(Items.STRING,2)
+                .unlockedBy(getHasName(ModItems.WOOL_BALL.get()), has(ModItems.WOOL_BALL))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .group("wool_ball")
+                .save(output);
+        shapeless(RecipeCategory.MISC, Items.STRING,2)
+                .requires(ModItems.WOOL_BALL.get())
+                .unlockedBy(getHasName(ModItems.WOOL_BALL.get()), has(ModItems.WOOL_BALL))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .group("wool_ball")
+                .save(output,"dropdead:string_from_wool_ball");
+        shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.WOOL.white())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.WOOL_BALL.get())
+                .unlockedBy(getHasName(ModItems.WOOL_BALL.get()), has(ModItems.WOOL_BALL))
+                .group("wool_ball")
+                .save(output,"minecraft:white_wool_from_string");
+
+
+
+        shaped(RecipeCategory.TOOLS, ModItems.BOW_DRILL.get())
+                .pattern("A#")
+                .pattern("# ")
+                .define('A', Items.STRING)
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("bow_drill")
+                .save(output);
+        shaped(RecipeCategory.TOOLS, ModItems.SHARP_BOW_DRILL.get())
+                .pattern("A#")
+                .pattern("#B")
+                .define('A', Items.STRING)
+                .define('#', Items.STICK)
+                .define('B', ModTags.Items.BOW_DRILL_BITS)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .unlockedBy("has_drill_bit", has(ModTags.Items.BOW_DRILL_BITS))
+                .group("bow_drill")
+                .save(output);
+
+
         shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OAK_SPLIT_LOG.get(), 4)
                 .requires(ModTags.Items.OAK_SPLITTABLE)
                 .unlockedBy(getHasName(Blocks.OAK_LOG), has(Blocks.OAK_LOG))
@@ -79,22 +118,50 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_split_logs", has(ModTags.Items.SPLIT_LOGS))
                 .group("sticks")
                 .save(output);
+        shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLESTONE,2)
+                .pattern("A#")
+                .pattern("#A")
+                .define('A', ModBlocks.LOOSE_COBBLESTONE.get())
+                .define('#', Items.CLAY_BALL)
+                .unlockedBy(getHasName(ModBlocks.LOOSE_COBBLESTONE.get()), has(ModBlocks.LOOSE_COBBLESTONE.get()))
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .group("clay_cobblestone")
+                .save(output, "dropdead:cobblestone");
+
+        shaped(RecipeCategory.MISC, ModItems.UNFIRED_BOWL.get())
+                .pattern("AA")
+                .define('A', Items.CLAY_BALL)
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .group("unfired_pottery")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.BOWL_OF_TANNIN.get())
+                .requires(ModTags.Items.WOOD_BARK)
+                .requires(ModItems.BOWL_OF_WATER)
+                .requires(ModItems.RAWHIDE)
+                .unlockedBy("has_wood_bark", has(ModTags.Items.WOOD_BARK))
+                .group("bowl_of_tannin")
+                .save(output);
 
 
 
 
 
 
-        shapeless(RecipeCategory.MISC, Blocks.OAK_PLANKS)
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_PLANKS)
                 .requires(Blocks.BEDROCK)
                 .unlockedBy(getHasName(Blocks.BEDROCK), has(Blocks.BEDROCK))
                 .group("temp")
                 .save(output);
 
         List<ItemLike> PYRITE_SMELTABLES = List.of(ModBlocks.PYRITE_ORE, ModBlocks.DEEPSLATE_PYRITE_ORE);
+        List<ItemLike> CLAY_SMELTABLES = List.of(ModItems.UNFIRED_BOWL);
 
         oreSmelting(PYRITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.PYRITE.get(),.25f,200,"pyrite");
         oreBlasting(PYRITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.PYRITE.get(),.25f,100,"pyrite");
+
+        campfireSmelting(CLAY_SMELTABLES,RecipeCategory.MISC,CookingBookCategory.MISC,Items.BOWL,.03f,200,"clay");
     }
 
     @Override
@@ -106,4 +173,9 @@ public class ModRecipeProvider extends RecipeProvider {
                     .save(output, DropDead.MOD_ID + ":" + getItemName(result) + fromDesc + "_" + getItemName(itemlike));
         }
     }
+
+    protected void campfireSmelting(List<ItemLike> smeltables, RecipeCategory craftingCategory, CookingBookCategory cookingCategory, ItemLike result, float experience, int cookingTime, String group) {
+        this.oreCooking(CampfireCookingRecipe::new, smeltables, craftingCategory, cookingCategory, result, experience, cookingTime, group, "_from_campfire_cooking");
+    }
+
 }

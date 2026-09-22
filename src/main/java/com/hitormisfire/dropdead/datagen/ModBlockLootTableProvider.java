@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SegmentableBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -30,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.PYRITE_BLOCK.get());
         dropSelf(ModBlocks.FOSSIL_BLOCK.get());
+        dropSelf(ModBlocks.LOOSE_COBBLESTONE.get());
 
         add(ModBlocks.OAK_SPLIT_LOG.get(), this::createSegmentedLogDrops);
 
@@ -37,6 +39,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createOreDrop(ModBlocks.PYRITE_ORE.get(), ModItems.PYRITE.get()));
         add(ModBlocks.DEEPSLATE_PYRITE_ORE.get(),
                 createOreDrop(ModBlocks.DEEPSLATE_PYRITE_ORE.get(), ModItems.PYRITE.get()));
+
     }
 
 

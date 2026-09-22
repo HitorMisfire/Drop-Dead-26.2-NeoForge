@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bow_drill",
+  "key": {
+    "#": "minecraft:stick",
+    "A": "minecraft:string",
+    "B": "#dropdead:bow_drill_bits"
+  },
+  "pattern": [
+    "A#",
+    "#B"
+  ],
+  "result": {
+    "id": "dropdead:sharp_bow_drill"
+  }
+}

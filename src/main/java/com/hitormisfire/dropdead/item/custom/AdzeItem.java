@@ -65,8 +65,6 @@ public class AdzeItem extends Item {
             if (player instanceof ServerPlayer) {
                 ServerPlayer serverPlayer = (ServerPlayer)player;
                 CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, pos, itemInHand);
-
-                Block.popResourceFromFace(level, pos, context.getClickedFace(), new ItemStack(ModItems.WOOL_BALL.get()));
             }
 
             level.setBlock(pos, newBlock.get(), 11);

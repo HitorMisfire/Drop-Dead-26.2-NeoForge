@@ -3,7 +3,6 @@
   "package": "com.hitormisfire.dropdead.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "AxeItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 200,
+  "experience": 0.03,
+  "group": "clay",
+  "ingredient": "dropdead:unfired_bowl",
+  "result": {
+    "id": "minecraft:bowl"
+  }
+}

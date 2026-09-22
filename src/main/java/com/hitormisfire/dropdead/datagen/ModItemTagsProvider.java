@@ -33,6 +33,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModTags.Items.BOW_DRILL_BITS)
                 .add(ModItems.getRK(Items.FLINT))
                 .addTag(ItemTags.METAL_NUGGETS);
+        tag(ModTags.Items.LOOSE_COBBLE_TOOLS)
+                .add(ModItems.getRK(ModItems.SHARP_BOW_DRILL.get()))
+                .add(ModItems.getRK(Items.STONE_PICKAXE))
+                .add(ModItems.getRK(Items.COPPER_PICKAXE));
+
 
         tag(ItemTags.STONE_TOOL_MATERIALS)
                 .add(ModItems.getRK(ModBlocks.LOOSE_COBBLESTONE.asItem()));

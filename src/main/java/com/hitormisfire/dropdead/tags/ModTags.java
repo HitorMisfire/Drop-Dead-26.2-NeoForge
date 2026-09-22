@@ -26,6 +26,7 @@ public class ModTags {
 
         public static final TagKey<Item> BOW_DRILL_REPAIRABLE = createTag("bow_drill_repairable");
         public static final TagKey<Item> BOW_DRILL_BITS = createTag("bow_drill_bits");
+        public static final TagKey<Item> LOOSE_COBBLE_TOOLS = createTag("loose_cobble_tools");
 
         public static final TagKey<Item> WOOD_BARK = createTag("wood_bark");
 

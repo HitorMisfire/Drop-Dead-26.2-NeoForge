@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "temp",
+  "ingredients": [
+    "minecraft:bedrock"
+  ],
+  "result": {
+    "id": "minecraft:oak_planks"
+  }
+}

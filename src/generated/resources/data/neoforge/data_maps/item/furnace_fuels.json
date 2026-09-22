@@ -1,0 +1,10 @@
+{
+  "values": {
+    "#dropdead:split_logs": {
+      "burn_time": 300
+    },
+    "dropdead:wool_ball": {
+      "burn_time": 100
+    }
+  }
+}
